@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>MSU-IIT Cabling Simulation</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="sidebar">
+    <img id="logo" src="https://graph.facebook.com/MSUIITPH/picture?type=large" alt="MSU-IIT Logo" />
+    <h3>MSU-IIT Cabling Simulation</h3>
+
+    <div>
+      <label for="mode-select">Network mode:</label>
+      <select id="mode-select">
+        <option value="overhead">Existing Overhead</option>
+        <option value="underground">Proposed Underground</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="source-select">Source node:</label>
+      <select id="source-select"></select>
+    </div>
+
+    <div>
+      <label for="target-select">Destination node:</label>
+      <select id="target-select"></select>
+    </div>
+
+    <button id="run-btn">Compute Shortest Path</button>
+
+    
+
+    <div id="results">
+      <div><strong>Path:</strong> <span id="path-label">—</span></div>
+      <div><strong>Distance:</strong> <span id="distance-label">—</span></div>
+    </div>
+
+
+      
+  </div>
+
+  <div id="map-wrapper">
+    <div id="map"></div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="https://unpkg.com/leaflet-rotate@0.2.0/dist/leaflet-rotate-src.js"></script>
+
+<script src="script.js"></script>
+  
+</body>
+</html>
